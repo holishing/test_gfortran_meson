@@ -1,0 +1,19 @@
+# This workflow will install Fortran and Meson Build System dependencies, and do compile test
+
+name: Fortran Program with Meson Build System Compiling Test
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        content: [""]
+    steps:
+    - uses: actions/checkout@v2
+    - name: gfortran-meson compiling test
+      uses: holishing/gfortran_meson_action@2020.405.0
+      with:
+        matrix:
+        args:  ${{ matrix.content }}
