@@ -1,2 +1,2 @@
 project('test_gfortran_meson','fortran')
-executable('hello','src/hello.for')
+executable('hello','src/hello.for',install : true)
