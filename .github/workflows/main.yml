@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: gfortran-meson compiling test
-      uses: holishing/gfortran_meson_action@2020.405.0
+      uses: holishing/gfortran_meson_action@2020.405.1
       with:
         matrix:
         args:  ${{ matrix.content }}
